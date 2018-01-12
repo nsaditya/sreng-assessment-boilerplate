@@ -19,15 +19,13 @@ Using Spring Boot and the IDE of your choice, create a project that will fetch a
 
 1. Periodically call the marketplace to pull orders
 
->- See http://assessment.skubana.com/swagger-ui.html#!/Orders/getOrdersUsingGET
-
->- Example: GET http://assessment.skubana.com/orders
+> See http://assessment.skubana.com/swagger-ui.html#!/Orders/getOrdersUsingGET
 	
->- Once orders are pulled, they won't be available anymore from the API endpoint so every subsequent call will provide new orders
+> Once orders are pulled, they won't be available anymore from the API endpoint so every subsequent call will provide new orders
 
 2. For every order, you need to make an HTTP request to your fictional third party logistics partner (3PL) API to allocate inventory. This API is known to be slow when under heavy load, your solution should take that into account (you might want to consider pulling the orders first and then process them asynchronously)
 
->- See http://assessment.skubana.com/swagger-ui.html#!/Product32Stocks/postProductStocksUsingPOST
+- See http://assessment.skubana.com/swagger-ui.html#!/Product32Stocks/postProductStocksUsingPOST
 
 >- this API endpoint can return 2 different HTTP statuses
 
