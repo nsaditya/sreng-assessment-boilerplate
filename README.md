@@ -28,8 +28,8 @@ Using Spring Boot and the IDE of your choice, create a project that will fetch a
 > See http://assessment.skubana.com/swagger-ui.html#!/Product32Stocks/postProductStocksUsingPOST
 >
 > this API endpoint can return 2 different HTTP statuses
->     200: If inventory allocated successfully - Order is fulfillable
->     400: If inventory wasn't available for some reason - Order not fulfillable
+>     | 200 | If inventory allocated successfully - Order is fulfillable |
+>     | 400 | If inventory wasn't available for some reason - Order not fulfillable |
 
 
 3. Implement the following actions depending of the order status. 
