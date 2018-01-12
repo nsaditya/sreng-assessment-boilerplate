@@ -30,6 +30,7 @@ Using Spring Boot and the IDE of your choice, create a project that will fetch a
 > this API endpoint can return 2 different HTTP statuses
 
 | HTTP Status | description |
+| ------------- |:-------------:|
 | 200 | If inventory allocated successfully - Order is fulfillable |
 | 400 | If inventory wasn't available for some reason - Order not fulfillable |
 
@@ -42,3 +43,9 @@ Using Spring Boot and the IDE of your choice, create a project that will fetch a
 > See http://assessment.skubana.com/swagger-ui.html#!/Shipments/postShipmentsUsingPOST
 
 Once you've reached the 3 hours mark, please send over your project along with instructions to run it. If you have any ideas about ways to improve your project in order to make it closer to a production application, please provide that as well as this will be considered while reviewing your solution. 
+
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
