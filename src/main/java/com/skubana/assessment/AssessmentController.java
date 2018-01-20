@@ -1,6 +1,6 @@
 package com.skubana.assessment;
 
-import com.skubana.assessment.pojo.Order;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
@@ -9,18 +9,21 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.List;
+import com.skubana.assessment.pojo.Order;
 
 @RestController
 public class AssessmentController {
 
 	private static final String MARKETPLATE_ENDPOINT_URL = "http://assessment.skubana.com/orders";
-
+	
 	@Autowired
 	private RestTemplate restTemplate;
 
 	@Autowired
 	private OrderRepository orderRepository;
+	
+	@Autowired
+	private FulfilmentController fulfilmentController;
 
 	@Scheduled(fixedDelay = 10000)
 	public List<Order> getOrders() {
@@ -37,6 +40,7 @@ public class AssessmentController {
 					order.getOrderItems().stream()
 							.forEach(orderItem -> orderItem.setOrder(order));
 					orderRepository.save(order);
+					fulfilmentController.allocateInventory(order);
 				});
 
 		System.out.println(orderList.size() + " orders downloaded");
@@ -44,17 +48,8 @@ public class AssessmentController {
 		return orderList;
 	}
 
-	public void allocateInventory(Order order) {
+	
 
-		boolean fulfillable = true;
-		if (fulfillable) {
-
-		}
-
-	}
-
-	public void createShipment(Order order) {
-
-	}
+	
 
 }
