@@ -51,4 +51,8 @@ Using Spring Boot and the IDE of your choice, create a project that will fetch a
     > See http://assessment.skubana.com/swagger-ui.html#!/Shipments/postShipmentsUsingPOST
     >
 
-Once you've reached the 3 hours mark, please send over your project along with instructions to run it. If you have any ideas about ways to improve your project in order to make it closer to a production application, please provide that as well as this will be considered while reviewing your solution. 
+Once you've reached the 2 hours mark, please create a git Pull Request or send over the zipped project by email
+
+If you have any ideas about ways to improve your project in order to make it closer to a production application, please provide that as well as this will be considered while reviewing your solution. 
+
+Good luck!
